@@ -10,4 +10,6 @@ Active Directory Setup: Promoted a Server 2022 instance to a Domain Controller f
 
 IAM Implementation: Created Organizational Units (OUs) for departments like HR and applied Group Policy Objects (GPOs) to restrict system tools like the Command Prompt.
 
+![Security Logs showing HR User Login](event-viewer-logs.png)
+
 SOC Investigation: Analyzed Windows Security Logs (Event ID 4624) to verify successful user authentications and identify workstation source IPs.
