@@ -3,8 +3,9 @@ Goal: Build a secure, isolated enterprise network to practice Identity and Acces
 
 Tech Stack: VirtualBox, Windows Server 2022, Windows 10 Pro.
 
-What I Accomplished: 
-Configured an internal virtual network (intnet) with static IP addressing and DNS to allow domain communication while maintaining isolation.
+What I Accomplished
+
+Network Infrastructure: Configured an internal virtual network (intnet) with static IP addressing and DNS to allow domain communication while maintaining isolation.
 
 Active Directory Setup: Promoted a Server 2022 instance to a Domain Controller for the talha.local forest.
 
