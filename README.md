@@ -1,18 +1,19 @@
-Project Overview
-Goal: Build a secure, isolated enterprise network to practice Identity and Access Management (IAM) and Security Operations Center (SOC) analysis.
+**Project Overview**
 
-Tech Stack: VirtualBox, Windows Server 2022, Windows 10 Pro.
+**Goal:** Build a secure, isolated enterprise network to practice Identity and Access Management (IAM) and Security Operations Center (SOC) analysis.
 
-What I Accomplished
+**Tech Stack:** VirtualBox, Windows Server 2022, Windows 10 Pro.
 
-Network Infrastructure: Configured an internal virtual network (intnet) with static IP addressing and DNS to allow domain communication while maintaining isolation.
+**What I Accomplished**
 
-Active Directory Setup: Promoted a Server 2022 instance to a Domain Controller for the talha.local forest.
+**Network Infrastructure:** Configured an internal virtual network (intnet) with static IP addressing and DNS to allow domain communication while maintaining isolation.
 
-IAM Implementation: Created Organizational Units (OUs) for departments like HR and applied Group Policy Objects (GPOs) to restrict system tools like the Command Prompt.
+**Active Directory Setup:** Promoted a Server 2022 instance to a Domain Controller for the talha.local forest.
+
+**IAM Implementation:** Created Organizational Units (OUs) for departments like HR and applied Group Policy Objects (GPOs) to restrict system tools like the Command Prompt.
 
 ![Screenshot of GPO settings or the blocked CMD prompt](cmd-blocked-policy.png)
 
-SOC Investigation: Analyzed Windows Security Logs (Event ID 4624) to verify successful user authentications and identify workstation source IPs.
+**SOC Investigation:** Analyzed Windows Security Logs (Event ID 4624) to verify successful user authentications and identify workstation source IPs.
 
 ![Security Logs showing HR User Login](event-viewer-logs.png)
