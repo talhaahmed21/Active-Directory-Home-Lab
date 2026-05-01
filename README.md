@@ -1,19 +1,25 @@
 **Project Overview**
 
-**Goal:** Build a secure, isolated enterprise network to practice Identity and Access Management (IAM) and Security Operations Center (SOC) analysis.
+This project involved deploying a functional Windows Domain environment to practice centralized administration and identity management. The lab consists of a Windows Server 2022 Domain Controller and a Windows 10 Pro client workstation.
 
-**Tech Stack:** VirtualBox, Windows Server 2022, Windows 10 Pro.
+**Core Implementation**
 
-**What I Accomplished**
+**Active Directory Domain Services:** Established the talha.local domain and successfully joined the client workstation to the network.
 
-**Network Infrastructure:** Configured an internal virtual network (intnet) with static IP addressing and DNS to allow domain communication while maintaining isolation.
+**Organizational Structure:** Created an HR Organizational Unit (OU) to manage specific user sets and departmental assets.
 
-**Active Directory Setup:** Promoted a Server 2022 instance to a Domain Controller for the talha.local forest.
+**Identity & Access Management (IAM):** Configured and enforced a Group Policy Object (GPO) to restrict access to the Command Prompt for HR users, reducing the system's attack surface.
 
-**IAM Implementation:** Created Organizational Units (OUs) for departments like HR and applied Group Policy Objects (GPOs) to restrict system tools like the Command Prompt.
+**Verification & Investigation**
 
-![Screenshot of GPO settings or the blocked CMD prompt](cmd-blocked-policy.png)
+**Policy Validation:** Verified the successful application of security policies on the client machine using gpupdate /force.
 
-**SOC Investigation:** Analyzed Windows Security Logs (Event ID 4624) to verify successful user authentications and identify workstation source IPs.
+**Authentication Auditing:** Used Windows Event Viewer to audit login activity, identifying successful authentication events (Event ID 4624) to track user sessions and source IP addresses.
 
-![Security Logs showing HR User Login](event-viewer-logs.png)
+**Lab Evidence**
+
+1. Policy Enforcement (Command Prompt Blocked)
+![Verification of GPO blocking CMD](cmd-blocked-policy.png)
+
+2. Authentication Audit (Event Viewer Logs)
+![Event ID 4624 showing successful user login](event-viewer-logs.png)
